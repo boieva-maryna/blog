@@ -5,24 +5,35 @@
 }
 .grid-wrp{
     display: grid;
-    grid-template-columns: 1fr 3.5fr 1fr 1fr;
-    grid-template-rows: repeat(3,minmax(100px,max-content));
     justify-content:center;
 }
 .grid-wrp>header{
     background-color: orange;
-    grid-column: 1/-1;
 }
 main{
     background-color: LEMONCHIFFON;
-    grid-column: 2/3;
 }
 aside{
     background-color:STEELBLUE;
-    grid-column: 3/4;
-    max-width: 343px;
 }
 footer{
     background-color: PALEVIOLETRED;
-    grid-column: 1/-1;
+}
+@media only screen and (min-device-width : 768px){
+    .grid-wrp{
+        grid-template-columns: 1fr minmax(auto, 940px) minmax(auto, max-content) 1fr;
+        grid-template-rows: repeat(3,minmax(100px,max-content));
+    }
+    .grid-wrp>header{
+        grid-column: 1/-1;
+    }
+    main{
+        grid-column: 2/3;
+    }
+    aside{
+        grid-column: 3/4;
+    }
+    footer{
+        grid-column: 1/-1;
+    }
 }
