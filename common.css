@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.grid-wrp{
+    display: grid;
+    justify-content:center;
+}
+.grid-wrp>header{
+    background-color: orange;
+}
+main{
+    background-color: LEMONCHIFFON;
+}
+aside{
+    background-color:STEELBLUE;
+}
+footer{
+    background-color: PALEVIOLETRED;
+}
