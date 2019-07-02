@@ -2,6 +2,8 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 .grid-wrp{
     display: grid;
@@ -21,7 +23,7 @@ footer{
 }
 @media only screen and (min-device-width : 768px){
     .grid-wrp{
-        grid-template-columns: 1fr minmax(auto, 940px) minmax(auto, max-content) 1fr;
+        grid-template-columns: 1fr minmax(auto, 952.9px) minmax(auto, max-content) 1fr;
         grid-template-rows: repeat(3,minmax(100px,max-content));
     }
     .grid-wrp>header{
@@ -35,5 +37,12 @@ footer{
     }
     footer{
         grid-column: 1/-1;
+    }
+    .grid-wrp>header,footer{
+        display: grid;
+        grid-template-columns: 1fr minmax(auto,1200px) 1fr;
+    }
+    .header-wrp,.footer-wrp{
+        grid-column: 2/3;
     }
 }
