@@ -21,11 +21,20 @@
         display: grid;
         grid-template-columns: 1fr minmax(auto,1200px) 1fr;
     }
+    .soc,.menu>ul{
+        display: flex;
+        justify-content: space-between;
+    }
     .header-wrp,.footer-wrp{
         grid-column: 2/3;
+        display:grid;
+        grid-template-areas: "logo . . . search soc"
+        "logo . . . menu menu";
     }
 }
-*{
+@media only screen and(max-device-width:768px){
+    
+}*{
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -47,11 +56,28 @@ aside{
 }
 footer{
     background-color: PALEVIOLETRED;
+}
+.logo{
+    grid-area: logo;
+}
+.menu{
+    grid-area: menu;
+}
+.soc{
+    grid-area: soc;
+}
+.search{
+    grid-area: search;
+}
+.search>a{
+    display: block;
+    height: 100%;
+    width: 100%;
 }/*the idea is from https://codepen.io/sgtab/details/weNbpX*/
 .logo{
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 .logo>*{
     position:absolute;
@@ -61,12 +87,12 @@ footer{
     content: '';
 }
 .pizza-crust {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   background-color: #D3B88C;
   border-radius: 50%;
-  left: 10px;
-  top: 10px;
+  left: 0px;
+  top: 0px;
   border: 2px solid #3E4E50;
   z-index: 2;
   background-image: radial-gradient(darken(#D3B88C, 2%) 10%, transparent 15%), 
@@ -75,25 +101,25 @@ footer{
   background-position: 25px 0px, 0px 35px;
 }
 .pizza-center {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: #CC4949;
-  top: 15px;
-  left: 15px;
+  top: 10px;
+  left: 10px;
   border: 2px solid #3E4E50;
   z-index: 3;
   background-image: radial-gradient(darken(#CC4949, 7%) 10%, transparent 15%);
 }
 .basil {
   z-index: 10;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 25px;
   background-color: #86BA90;
   left: 30px;
   top: 20px;
-  border-top-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   border: 1px solid #3E4E50;
 }
  .basil:before {
@@ -101,21 +127,21 @@ footer{
     width: 100%;
     height: 100%;
     background-color: #86BA90;
-    left: -15px;
-    top: 10px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    left: 18px;
+    top: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     border: 1px solid #3E4E50;  
   }
   .cheese {
   z-index: 10;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   background-color: #EFF8E2;
   border-radius: 50%;
   border: 1px solid #3E4E50;
-  top: 30px;
-  left: 40px;
+  top: 35px;
+  left: 65px;
   }
   .cheese:before {
     width: 100%;
@@ -123,8 +149,8 @@ footer{
     background-color: #EFF8E2;
     border-radius: 50%;
     border: 1px solid #3E4E50;
-    top: 8px;
-    left: -20px;
+    top: 25px;
+    left: -38px;
     
   }
   .cheese:after {
@@ -133,34 +159,34 @@ footer{
     background-color: #EFF8E2;
     border-radius: 50%;
     border: 1px solid #3E4E50;
-    top: -10px;
+    top: -15px;
     left: -20px;
   } 
 .olive {
   z-index: 10;
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   background-color: #CC4949;
-  border: 1px solid #3E4E50;
+  border: 2px solid #3E4E50;
   border-radius: 50%;
-  top: 32px;
-  left:30px;
+  top: 50px;
+  left:20px;
 }
 .olive:before {
     width: 100%;
     height: 100%;
     background-color: #CC4949;
-    border: 1px solid #3E4E50;
+    border: 2px solid #3E4E50;
     border-radius: 50%;
     top: -10px;
-    left: 8px;
+    left: 25px;
   }
   .olive:after {
     width: 100%;
     height: 100%;
     background-color: #CC4949;
-    border: 1px solid #3E4E50;
+    border: 2px solid #3E4E50;
     border-radius: 50%;
-    top: 6px;
-    left: 8px; 
+    top: 25px;
+    left: 25px; 
   }

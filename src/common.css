@@ -21,3 +21,20 @@ aside{
 footer{
     background-color: PALEVIOLETRED;
 }
+.logo{
+    grid-area: logo;
+}
+.menu{
+    grid-area: menu;
+}
+.soc{
+    grid-area: soc;
+}
+.search{
+    grid-area: search;
+}
+.search>a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}

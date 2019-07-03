@@ -21,7 +21,14 @@
         display: grid;
         grid-template-columns: 1fr minmax(auto,1200px) 1fr;
     }
+    .soc,.menu>ul{
+        display: flex;
+        justify-content: space-between;
+    }
     .header-wrp,.footer-wrp{
         grid-column: 2/3;
+        display:grid;
+        grid-template-areas: "logo . . . search soc"
+        "logo . . . menu menu";
     }
 }
