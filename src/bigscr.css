@@ -1,7 +1,7 @@
 
 @media only screen and (min-device-width : 768px){
     .grid-wrp{
-        grid-template-columns: 1fr minmax(auto, 952.9px) minmax(auto, max-content) 1fr;
+        grid-template-columns: 1fr minmax(auto, 886.9px) minmax(auto, max-content) 1fr;
         grid-template-rows: repeat(4,minmax(100px,max-content));
     }
     .grid-wrp>header{

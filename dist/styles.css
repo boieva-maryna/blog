@@ -1,0 +1,166 @@
+
+@media only screen and (min-device-width : 768px){
+    .grid-wrp{
+        grid-template-columns: 1fr minmax(auto, 886.9px) minmax(auto, max-content) 1fr;
+        grid-template-rows: repeat(4,minmax(100px,max-content));
+    }
+    .grid-wrp>header{
+        grid-column: 1/-1;
+    }
+    main{
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+    aside{
+        grid-column: 3/4;
+    }
+    footer{
+        grid-column: 1/-1;
+    }
+    .grid-wrp>header,footer{
+        display: grid;
+        grid-template-columns: 1fr minmax(auto,1200px) 1fr;
+    }
+    .header-wrp,.footer-wrp{
+        grid-column: 2/3;
+    }
+}
+*{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.grid-wrp{
+    display: grid;
+    justify-content:center;
+}
+.grid-wrp>header{
+    background-color: orange;
+}
+main{
+    background-color: lime;
+}
+aside{
+    background-color:STEELBLUE;
+}
+footer{
+    background-color: PALEVIOLETRED;
+}/*the idea is from https://codepen.io/sgtab/details/weNbpX*/
+.logo{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.logo>*{
+    position:absolute;
+}
+.logo>*::before,.logo>*::after{
+    position: absolute;
+    content: '';
+}
+.pizza-crust {
+  width: 50px;
+  height: 50px;
+  background-color: #D3B88C;
+  border-radius: 50%;
+  left: 10px;
+  top: 10px;
+  border: 2px solid #3E4E50;
+  z-index: 2;
+  background-image: radial-gradient(darken(#D3B88C, 2%) 10%, transparent 15%), 
+    radial-gradient(darken(#D3B88C, 2%) 10%, transparent 15%);
+  background-size: 80px 80px;
+  background-position: 25px 0px, 0px 35px;
+}
+.pizza-center {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #CC4949;
+  top: 15px;
+  left: 15px;
+  border: 2px solid #3E4E50;
+  z-index: 3;
+  background-image: radial-gradient(darken(#CC4949, 7%) 10%, transparent 15%);
+}
+.basil {
+  z-index: 10;
+  width: 10px;
+  height: 10px;
+  background-color: #86BA90;
+  left: 30px;
+  top: 20px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid #3E4E50;
+}
+ .basil:before {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #86BA90;
+    left: -15px;
+    top: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px solid #3E4E50;  
+  }
+  .cheese {
+  z-index: 10;
+  width: 10px;
+  height: 10px;
+  background-color: #EFF8E2;
+  border-radius: 50%;
+  border: 1px solid #3E4E50;
+  top: 30px;
+  left: 40px;
+  }
+  .cheese:before {
+    width: 100%;
+    height: 100%;
+    background-color: #EFF8E2;
+    border-radius: 50%;
+    border: 1px solid #3E4E50;
+    top: 8px;
+    left: -20px;
+    
+  }
+  .cheese:after {
+    width: 100%;
+    height: 100%;
+    background-color: #EFF8E2;
+    border-radius: 50%;
+    border: 1px solid #3E4E50;
+    top: -10px;
+    left: -20px;
+  } 
+.olive {
+  z-index: 10;
+  width: 5px;
+  height: 5px;
+  background-color: #CC4949;
+  border: 1px solid #3E4E50;
+  border-radius: 50%;
+  top: 32px;
+  left:30px;
+}
+.olive:before {
+    width: 100%;
+    height: 100%;
+    background-color: #CC4949;
+    border: 1px solid #3E4E50;
+    border-radius: 50%;
+    top: -10px;
+    left: 8px;
+  }
+  .olive:after {
+    width: 100%;
+    height: 100%;
+    background-color: #CC4949;
+    border: 1px solid #3E4E50;
+    border-radius: 50%;
+    top: 6px;
+    left: 8px; 
+  }
