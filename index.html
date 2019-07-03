@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
     <link rel="stylesheet" href="dist/styles.css">
     <title>PizzaForAll</title>
 </head>
@@ -11,6 +12,13 @@
     <div class="grid-wrp">
         <header>
             <div class="header-wrp">
+                    <a href="#menu"
+                    id="menu-toggle"
+                    class="menu-toggle"
+                    aria-label="Open menu">
+                   <span class="sr-only">Open main menu</span>
+                   <span class="fa fa-bars" aria-hidden="true"></span>
+                    </a>
                 <div class="logo">
                     <div class="pizza-crust"></div>
                     <div class="pizza-center"> </div>
@@ -18,19 +26,30 @@
                     <div class="cheese"></div>
                     <div class="olive"></div>
                 </div>
-                <ul class="soc">
+                <ul class="soc soc-h">
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">YouTube</a></li>
                     <li><a href="#">Instagram</a></li>
                 </ul>
-                <span class="search"><a href="#">🔎</a></span>
-                <nav class="menu">
+                <span class="search search-h"><a href="#">🔎</a></span>
+                <nav class="menu menu-h" id="menu">
+                        <a href="menu-toggle"
+                        id="menu-close"
+                        class="menu-close"
+                        aria-label="Close menu">
+                       <span class="sr-only">Close main menu</span>
+                       <span class="fa fa-close" aria-hidden="true"></span>
+                        </a>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact us</a></li>
                     </ul>
                 </nav>
+                <a href="#menu-toggle"
+                 class="backdrop"
+                 tabindex="-1"
+                 aria-hidden="true" hidden></a>
             </div>
         </header>
         <main>
@@ -123,7 +142,7 @@
             <div class="footer-wrp">
                 <div class="logo"></div>
                 <p>© 2019 PizzaForAll</p>
-                <ul class="soc">
+                <ul class="soc soc-f">
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">YouTube</a></li>
                     <li><a href="#">Instagram</a></li>

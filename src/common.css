@@ -6,11 +6,15 @@
     padding: 0;
 }
 .grid-wrp{
+    width: 100%;
     display: grid;
     justify-content:center;
 }
 .grid-wrp>header{
     background-color: orange;
+}
+.header-wrp,.footer-wrp{
+    display:grid;
 }
 main{
     background-color: lime;
@@ -24,14 +28,14 @@ footer{
 .logo{
     grid-area: logo;
 }
-.menu{
-    grid-area: menu;
+.menu-h{
+    grid-area: menu-h;
 }
-.soc{
-    grid-area: soc;
+.soc-h{
+    grid-area: soc-h;
 }
-.search{
-    grid-area: search;
+.search-h{
+    grid-area: search-h;
 }
 .search>a{
     display: block;

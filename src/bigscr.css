@@ -7,6 +7,9 @@
     .grid-wrp>header{
         grid-column: 1/-1;
     }
+    .menu-toggle,.menu-close{
+        display: none;
+    }
     main{
         grid-column: 2/3;
         grid-row: 2/4;
@@ -27,8 +30,9 @@
     }
     .header-wrp,.footer-wrp{
         grid-column: 2/3;
-        display:grid;
-        grid-template-areas: "logo . . . search soc"
-        "logo . . . menu menu";
+    }
+    .header-wrp{
+           grid-template-areas: "logo . . . search-h soc-h"
+        "logo . . . menu-h menu-h";
     }
 }
