@@ -1,0 +1,111 @@
+/*the idea is from https://codepen.io/sgtab/details/weNbpX*/
+.logo{
+    position: relative;
+}
+.logo>*{
+    position:absolute;
+}
+.logo>*::before,.logo>*::after{
+    position: absolute;
+    content: '';
+}
+.pizza-crust {
+  width: 100%;
+  height: 100%;
+  background-color: #F2DC99;
+  border-radius: 50%;
+  left: 0px;
+  top: 0px;
+  border: 2px solid #3E4E50;
+  z-index: 2;
+}
+.pizza-center {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #CC4949;
+  top: 10%;
+  left: 10%;
+  border: 2px solid #3E4E50;
+  z-index: 3;
+  background-image: radial-gradient(darken(#CC4949, 7%) 10%, transparent 15%);
+}
+.basil {
+  z-index: 10;
+  width: 20%;
+  height: 25%;
+  background-color: #86BA90;
+  left: 30%;
+  top: 20%;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #3E4E50;
+}
+ .basil:before {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #86BA90;
+    left: 120%;
+    top: 120%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #3E4E50;  
+  }
+  .cheese {
+  z-index: 10;
+  width: 20%;
+  height: 20%;
+  background-color: #EFF8E2;
+  border-radius: 50%;
+  border: 1px solid #3E4E50;
+  top: 35%;
+  left: 65%;
+  }
+  .cheese:before {
+    width: 100%;
+    height: 100%;
+    background-color: #EFF8E2;
+    border-radius: 50%;
+    border: 1px solid #3E4E50;
+    top: 140%;
+    left: -200%;
+    
+  }
+  .cheese:after {
+    width: 100%;
+    height: 100%;
+    background-color: #EFF8E2;
+    border-radius: 50%;
+    border: 1px solid #3E4E50;
+    top: -100%;
+    left: -100%;
+  } 
+.olive {
+  z-index: 10;
+  width: 10px;
+  height: 10px;
+  background-color: #CC4949;
+  border: 2px solid #3E4E50;
+  border-radius: 50%;
+  top: 50%;
+  left:20%;
+}
+.olive:before {
+    width: 100%;
+    height: 100%;
+    background-color: #CC4949;
+    border: 2px solid #3E4E50;
+    border-radius: 50%;
+    top: -100%;
+    left: 280%;
+  }
+  .olive:after {
+    width: 100%;
+    height: 100%;
+    background-color: #CC4949;
+    border: 2px solid #3E4E50;
+    border-radius: 50%;
+    top: 350%;
+    left: 450%; 
+  }

@@ -4,86 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/styles.css">
     <title>PizzaForAll</title>
 </head>
 <body>
     <div class="grid-wrp">
         <header>
             <div class="header-wrp">
-                <div class="logo"></div>
-                <nav>
-                    <ul class="menu">
+                    <a href="#menu"
+                    id="menu-toggle"
+                    class="menu-toggle"
+                    aria-label="Open menu">
+                   <span class="sr-only">Open main menu</span>
+                   <span class="fa fa-bars" aria-hidden="true"></span>
+                    </a>
+                <div class="logo logo-h">
+                    <div class="pizza-crust"></div>
+                    <div class="pizza-center"> </div>
+                    <div class="basil"></div>
+                    <div class="cheese"></div>
+                    <div class="olive"></div>
+                </div>
+                <ul class="soc soc-h">
+                    <li><a class="fab fa-facebook-f" href="#"></a></li>
+                    <li><a class="fab fa-youtube" href="#"></a></li>
+                    <li><a class="fab fa-instagram" href="#"></a></li>
+                </ul>
+                <a class="search search-h fas fa-search" href="#"></a>
+                <nav class="menu menu-h" id="menu">
+                        <a href="#menu-toggle"
+                        id="menu-close"
+                        class="menu-close"
+                        aria-label="Close menu">
+                       <span class="sr-only">Close main menu</span>
+                       <span class="fas fa-times" aria-hidden="true"></span>
+                        </a>
+                    <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact us</a></li>
                     </ul>
-                    <span class="search"><a href="#">🔎</a></span>
                 </nav>
-                <ul class="soc">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">YouTube</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
+                <a href="#menu-toggle"
+                 class="backdrop"
+                 tabindex="-1"
+                 aria-hidden="true" hidden></a>
             </div>
         </header>
         <main>
-            <article>
+            <article class="card">
                 <figure>
-                    <header></header>
-                    <img src="#" alt="">
-                    <p></p>
-                    <figcaption></figcaption>
-                    <p></p>
-                    <p></p>
+                    <header class="card-header"><h3>Tony’s Trending Recipe: Chicken Parm Pizza</h3></header>
+                    <p>1 m ago</p>
+                    <p>by <a>Tomy Gemignani</a></p>
+                    <div class="card-img-container">
+                        <img class="card-img" src="img/ChickenParmPizza.jpg" alt=" Chicken Parm Pizza">
+                    </div>
+                    <figcaption>Four years ago, I started a fundraising event with the San Francisco Giants. Baseball players Brandon Belt, Joe Panik and I created two 20-inch pizzas that would be sold by the slice. For each slice sold we donated $1. Joe Panik is from New York and mentioned to me that he hadn’t come across a...</figcaption>
+                    <p>Rating: 504 <a title="Rate!" href="#" class="fas fa-pizza-slice"></a></p>
                 </figure>
             </article>
-            <article>
-                    <figure>
-                        <header></header>
-                        <img src="#" alt="">
-                        <p></p>
-                        <figcaption></figcaption>
-                        <p></p>
-                        <p></p>
-                    </figure>
+            <article class="card">
+                <figure>
+                    <header class="card-header"><h3>Green Garlic Cream Pizza Sauce</h3></header>
+                    <p>2 m ago</p>
+                    <p>by <a>Jonny Meinke</a></p>
+                    <div class="card-img-container">
+                        <img class="card-img" src="img/GreenGarlicSauce.jpg" alt="">
+                    </div>
+                    <figcaption>
+                            It’s one of my favorite ways to make this style of sauce. I put everything into a blender and blend until the cream slightly thickens. A great combination is a green garlic and lemon. It’s got a nice kick of garlic and brightness from the lemon juice. Green garlic is only available in the spring and it pairs really well with all those spring vegetables we have missed during a wet winter.
+                    </figcaption>
+                    <p>Rating: 446 <a title="Rate!" href="#" class="fas fa-pizza-slice"></a></p>
+                </figure>
             </article>
-            <article>
+            <article class="card">
                     <figure>
-                        <header></header>
-                        <img src="#" alt="">
-                        <p></p>
-                        <figcaption></figcaption>
-                        <p></p>
-                        <p></p>
+                        <header class="card-header"><h3>Chicago's Pizza Pot Pie Recipe</h3></header>
+                        <p>15 d ago</p>
+                        <p>by <a>Jonny Meinke</a></p>
+                        <div class="card-img-container">
+                            <img class="card-img" src="img/PizzaPie.jpg" alt="Chicago's Pizza Pot Pie">
+                        </div>
+                        <figcaption>
+                                Everyone knows the Chicago deep dish pizza but I doubt many people have heard of their other famous pie... the Pizza Pot Pie. It’s nowhere near as widespread as the classic deep dish but it definitely has a cult following.
+                        </figcaption>
+                        <p>Rating: 106 <a title="Rate!" href="#" class="fas fa-pizza-slice"></a></p>
                     </figure>
-            </article>
+                </article>
+                <article class="card">
+                        <figure>
+                            <header class="card-header"><h3>Say No To Tomato (Sauce)</h3></header>
+                            <p>8 d ago</p>
+                            <p>by <a>Liana Winterniz</a></p>
+                            <div class="card-img-container">
+                                <img class="card-img" src="img/NoTomato.jpg" alt="Tomato sauce pizza">
+                            </div>
+                            <figcaption>
+                                    15 Alternatives to Tomato Sauce
+                                    The most important element of cooking is to balance flavors and textures. When it’s done well, eating becomes a true experience. Pizza is a perfect example of this with its crunchy and chewy crust, balanced with a tangy and velvety tomato sauce. Toppings contribute their salty or earthy flavors and the cheese harmonizes the medley as a fatty, and ‘oh so satisfying to chew’ flavor blanket.
+                            </figcaption>
+                            <p>Rating: 320 <a title="Rate!" href="#" class="fas fa-pizza-slice"></a></p>
+                        </figure>
+                    </article>
+                    <article class="card">
+                            <figure>
+                                <header class="card-header"><h3>Cauliflower Pizza Crust Recipe</h3></header>
+                                <p>2 w ago</p>
+                                <p>by <a>Daniel Replogle</a></p>
+                                <div class="card-img-container">
+                                    <img class="card-img" src="img/califlowerpizzacrust.jpg" alt="Cauliflower Pizza Crust">
+                                </div>
+                                <figcaption>
+                                        Cauliflower pizza crust is a great alternative to pizza dough for those looking to try something new, low carb, or a little healthier. Not only that, but this pizza crust is naturally gluten-free making it a great option for those who are looking for gluten-free dough recipes. Made up of mostly cauliflower and held together with the binding agents of cheese and egg this pizza crust compliments most pizza toppings very nicely.
+                                </figcaption>
+                                <p>Rating: 320 <a title="Rate!" href="#" class="fas fa-pizza-slice"></a></p>
+                            </figure>
+                        </article>
         </main>
-        <aside>
+        <aside id="author">
             <section>
                 <figure>
-                    <header>author name</header>
-                    <img src="#" alt="author`s photo">
-                    <figcaption>story</figcaption>
+                    <header><h2>Arijana</h2></header>
+                    <img src="img/author.jpg" alt="author`s photo">
+                    <figcaption>Welcome to my blog! I love cooking, baking, and photography. Combining these hobbies has produced a collection of my favorite recipes and the photos I take of them. I hope my blog brightens your days like it does mine <3</figcaption>
                 </figure>
             </section>
+        </aside>
+        <aside id="aside">
             <section>
-                <ul class="soc">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">YouTube</a></li>
-                    <li><a href="#">Instagram</a></li>
+                <ul class="soc soc-a">
+                    <li><a class="fab fa-facebook-f" href="#"></a></li>
+                    <li><a class="fab fa-youtube" href="#"></a></li>
+                    <li><a class="fab fa-instagram" href="#"></a></li>
                 </ul>
             </section>
             <section>
                 <form action="">
+                    <input type="text" placeholder="your name">
                     <input type="email" placeholder="your@mail.com">
-                    <input type="submit">
+                    <input type="submit" value="Subscribe">
                 </form>
             </section>
             <section>
                 <nav>
                     <input type="text">
-                    <span class="search"><a href="#">🔎</a></span>
+                    <a class="search fas fa-search" href="#"></a>
                 </nav>
             </section>
             <section>
@@ -94,18 +161,51 @@
                     <li><a href="#">recipe</a></li>
                     <li><a href="#">cooking</a></li>
                     <li><a href="#">dough</a></li>
+                    <li><a href="#">crust</a></li>
+                    <li><a href="#">food</a></li>
                 </ul>
             </section>
-            <section>
+            <section class="comments">
                 <ul>
                     <li>
                         <article class="comment">
-                            <img src="#" alt="comment author`s photo">
+                            <!--images from https://www.freepik.com/free-photos-vectors/people-->
+                            <img src="img/user1.png" alt="Anna user photo">
                             <header>
-                                <a href="#">name</a>
-                                <p>date</p>
+                                <a href="#">Anna</a>
+                                <p>12.03.2019</p>
                             </header>
-                            <p>comment text</p>
+                            <p>Thank you so much!</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="comment">
+                            <img src="img/user2.png" alt="David user photo">
+                            <header>
+                                <a href="#">David</a>
+                                <p>25.05.2019</p>
+                            </header>
+                            <p>😋</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="comment">
+                            <img src="img/user4.png" alt="Pizza Lover user photo">
+                            <header>
+                                <a href="#">Pizza Lover</a>
+                                <p>08.07.2019</p>
+                            </header>
+                            <p>Looooooooooooooooooooooooooooooooooooooooooove it!</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="comment">
+                            <img src="img/user3.png" alt="Mr Jonson photo">
+                            <header>
+                                <a href="#">Mr. Jonson</a>
+                                <p>08.07.2019</p>
+                            </header>
+                            <p>🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 </p>
                         </article>
                     </li>
                 </ul>
@@ -113,12 +213,18 @@
         </aside>
         <footer>
             <div class="footer-wrp">
-                <div class="logo"></div>
+                <div class="logo logo-f">
+                    <div class="pizza-crust"></div>
+                    <div class="pizza-center"> </div>
+                    <div class="basil"></div>
+                    <div class="cheese"></div>
+                    <div class="olive"></div>
+                </div>
                 <p>© 2019 PizzaForAll</p>
-                <ul class="soc">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">YouTube</a></li>
-                    <li><a href="#">Instagram</a></li>
+                <ul class="soc soc-f">
+                    <li><a class="fab fa-facebook-f" href="#"></a></li>
+                    <li><a class="fab fa-youtube" href="#"></a></li>
+                    <li><a class="fab fa-instagram" href="#"></a></li>
                 </ul>
             </div>
         </footer>

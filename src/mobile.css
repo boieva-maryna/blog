@@ -1,0 +1,128 @@
+/* menu is from https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793*/
+@media only screen and (max-device-width:767px){
+    .grid-wrp{
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+    "author"
+    "main"
+    "aside"
+    "footer"
+   }
+   .soc-h{
+       display: none;
+   }
+.menu-toggle {
+    grid-column: 1/2;
+    grid-row: 1/1;
+  display: inline-block;
+}
+.menu {
+  position: absolute;
+  display: none;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: visible;
+  transition: left 0.3s ease,
+    	box-shadow 0.3s ease;
+  z-index: 999;
+}
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 2.5em 0 0;
+  flex-direction: column;
+  /* Hide shadow w/ -8px while 'closed' */
+  -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+     -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+          box-shadow: -8px 0 8px rgba(0,0,0,.5);
+  min-height: 100%;
+  width: 200px;
+  background:#EFF8E2;
+}
+.menu a {
+  display: block;
+  padding: .75em 15px;
+  line-height: 1em;
+  font-size: 1em;
+  text-decoration: none;
+  border-bottom: 1px solid #3E4E50;
+}
+.menu li:first-child a {
+  border-top: 1px solid #3e4e50;
+}
+.menu a:hover,
+.menu a:focus {
+  text-decoration: underline;
+}
+.menu .menu-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.menu:target,
+.menu[aria-expanded="true"] {
+  display: block;
+  left: 0;
+  outline: none;
+  -moz-box-shadow: 3px 0 12px rgba(62, 78, 80,0.25);
+  -webkit-box-shadow: 3px 0 12px rgba(62, 78, 80,0.25);
+  box-shadow: 3px 0 12px rgba(62, 78, 80,0.25);
+}
+.menu:target .menu-close,
+.menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+}
+.menu:target ul,
+.menu[aria-expanded="true"] ul {
+  position: relative;
+  z-index: 1000;
+}
+.menu:target + .backdrop,
+.menu[aria-expanded="true"] + .backdrop{
+  position: absolute;
+  display: block;  
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background:#3E4E50;;
+  cursor: default;
+}
+
+@supports (position: fixed) {
+  .menu,
+  .menu:target + .backdrop,
+  .menu[aria-expanded="true"] + .backdrop{
+    position: fixed;
+  }
+}
+.header-wrp{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2,auto);
+}
+.search-h{
+  grid-column: 2/2;
+  grid-row: 1/2;
+  justify-self: end;
+}
+.logo{
+    padding: .75em 15px;
+    width: 80px;
+    height: 80px;
+    justify-self: center;
+}
+.logo-h{
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.soc-f,.soc-a{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-wrp>p{
+  text-align: center;
+}
+}
